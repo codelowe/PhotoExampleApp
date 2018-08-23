@@ -18,6 +18,12 @@ android {
     }
 }
 
+ext {
+    retrofitVersion = '2.4.0'
+    rxVersion = '2.1.0'
+    butterknifeVersion = '8.8.1'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
@@ -25,4 +31,18 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation "io.reactivex.rxjava2:rxandroid:$rxVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxVersion"
+
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
